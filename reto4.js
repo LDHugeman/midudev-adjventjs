@@ -12,7 +12,7 @@
    __#__
    __#__  height = 3 */
 
-function createXmasTree(height) {
+export default function createXmasTree(height) {
   var tree = '';
   if (height >= 1 && height <= 100) {
     var asterisk = '*';
@@ -32,16 +32,13 @@ function createXmasTree(height) {
       '\n' +
       printUnderscore(height) +
       '#' +
-      printUnderscore(height) +
-      '\n';
+      printUnderscore(height);
   } else {
     console.log('Altura no válida');
   }
   var treeComplete = tree + treeTrunk;
   return treeComplete;
 }
-
-console.log(createXmasTree(3));
 
 function printUnderscore(height) {
   var underscore = '';
@@ -50,5 +47,7 @@ function printUnderscore(height) {
   }
   return underscore;
 }
+
+console.log(createXmasTree(2));
 
 //console.log(printUnderscore(2));
